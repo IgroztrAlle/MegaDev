@@ -1,0 +1,54 @@
+---
+layout: runbook
+title: '#4471 · three problems, not one'
+owner: support desk
+status: living
+reviewed: 2026-10-29
+signature: v1.eyJzdWIiOiIxNTkzIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMyOTgwMDMsImV4cCI6MTc5MzM4NDQwM30.SvUH21pRZXRZ0CsFz91oKKwvOSdlXV5MIDflRUtar-g
+---
+
+<script>
+  import ProblemSplit from '#lib/kb/ProblemSplit.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+[#4471](/kb/incidents/4471) was marked known as one parser bug with one fix queued. The reports
+say otherwise. They hold three different problems, and the queued fix covers only the first.
+
+<Callout>
+Not one issue. A parser fix will not stop the other two.
+</Callout>
+
+## The split
+
+<ProblemSplit ticket={4471} />
+
+Each problem has its own ticket: [parser](https://github.com/IgroztrAlle/MegaDev/issues/1),
+[form hint](https://github.com/IgroztrAlle/MegaDev/issues/2),
+[one-day shift](https://github.com/IgroztrAlle/MegaDev/issues/3).
+
+## The three problems
+
+1. **parser.** The shared parser reads every date month first. Tenants who write the day first
+   get flipped dates. This is the bug the merged ticket describes.
+2. **hint.** The booking-v3 form prints `MM/DD/YYYY` under the date field. People at day-first
+   tenants type what it says, and the form reads it their way. It shows up only on the form
+   channel. Intake often tags these `parser`, because the symptom looks the same.
+3. **one-day shift.** The date is off by one day, not swapped (Tuesday shown as Monday; two
+   clients in different cities got different days for one meeting). Time zones are the likely
+   cause. That is a guess, not confirmed.
+
+## Why they were merged
+
+The dedupe rule matches on subject line ([decision 0001](/kb/decisions/0001-dedupe-by-subject)).
+"Wrong day on the invite" is true of all three problems, so they landed in one ticket. The
+merge is the cheap choice during an incident. This page is the later split it allows.
+
+## Checking this page
+
+The table is computed from the ticket export at render time. Reports the export lists twice
+are counted once. If the numbers here and the desk's live view disagree, trust the live view
+and fix the page.
+
+<RenderStamp {signature} />
