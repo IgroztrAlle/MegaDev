@@ -8,11 +8,11 @@
 		<link href="../../_app/immutable/chunks/CiqoZ2A1.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/CHfFqfNT.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/DQG8lHS1.js" rel="modulepreload">
-		<link href="../../_app/immutable/entry/app.DMqZP0UE.js" rel="modulepreload">
+		<link href="../../_app/immutable/entry/app.Du_1w2pz.js" rel="modulepreload">
 		<link href="../../_app/immutable/nodes/0.Izv2btRW.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/DK3Fl9T5.js" rel="modulepreload">
-		<link href="../../_app/immutable/nodes/6.w1x4imG_.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/w3yMyu1c.js" rel="modulepreload">
+		<link href="../../_app/immutable/nodes/6.DziifoZ2.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/CRYDMxNg.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/D2aY45x6.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/B90MN3EE.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/CVBzP17p.js" rel="modulepreload">
@@ -20,11 +20,11 @@
 		<!--e2jw2j--><!----><title>#4471 · three problems, not one · support kb</title>
 		<link href="../../_app/immutable/assets/runbook.COyw0cbZ.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/Callout.AbLv9dM_.css" rel="stylesheet">
-		<link href="../../_app/immutable/assets/_page.WePi3wDe.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/_page.dPWTHSUa.css" rel="stylesheet">
   </head>
   <body>
     <div style="display: contents"><!--[--><!--[--><!--[0--><!--[--><!--[--><!--[-1--><!--[--><div class="kb svelte-e2jw2j"><header><a class="crumb svelte-e2jw2j" href="/kb">support desk · kb</a> <h1 class="svelte-e2jw2j">#4471 · three problems, not one</h1> <p class="meta svelte-e2jw2j"><span>owner <b>support desk</b></span> <span class="status living svelte-e2jw2j">living</span> <span class="svelte-e2jw2j">reviewed 2026-10-29 · 0 days ago</span></p></header> <!--[-1--><!--]--> <main><p><a href="/kb/incidents/4471">#4471</a> was marked known as one parser bug with one fix queued. The reports
-say otherwise. They hold three different problems, and the queued fix covers only the first.</p> <aside class="note svelte-17bri61"><!---->Not one issue. A parser fix will not stop the other two.<!----></aside><!----> <h2>The split</h2> <table><thead><tr><th>problem</th><th>reports</th></tr></thead><tbody><!--[--><tr><td><code>parser</code></td><td>374</td></tr><tr><td><code>hint</code></td><td>33</td></tr><tr><td><code>one-day shift</code></td><td>5</td></tr><!--]--></tbody><tfoot><tr><td>total merged into #4471</td><td>412</td></tr></tfoot></table><!----> <p>Each problem has its own ticket: <a href="https://github.com/IgroztrAlle/MegaDev/issues/1" rel="nofollow">parser</a>, <a href="https://github.com/IgroztrAlle/MegaDev/issues/2" rel="nofollow">form hint</a>, <a href="https://github.com/IgroztrAlle/MegaDev/issues/3" rel="nofollow">one-day shift</a>.</p> <h2>The three problems</h2> <ol><li><strong>parser.</strong> The shared parser reads every date month first. Tenants who write the day first
+say otherwise. They hold three different problems, and the queued fix covers only the first.</p> <aside class="note svelte-17bri61"><!---->Not one issue. A parser fix will not stop the other two.<!----></aside><!----> <h2>The split</h2> <table><thead><tr><th>problem</th><th>reports</th></tr></thead><tbody><!--[--><tr><td><code>parser</code></td><td>379</td></tr><tr><td><code>hint</code></td><td>33</td></tr><tr><td><code>one-day shift</code></td><td>5</td></tr><!--]--></tbody><tfoot><tr><td>total merged into #4471</td><td>412</td></tr></tfoot></table> <p class="note svelte-h3x27m">Counted as the desk files them: the 5 one-day-shift reports are also inside the parser count, so the rows add up to more than the total.</p><!----> <p>Each problem has its own ticket: <a href="https://github.com/IgroztrAlle/MegaDev/issues/1" rel="nofollow">parser</a>, <a href="https://github.com/IgroztrAlle/MegaDev/issues/2" rel="nofollow">form hint</a>, <a href="https://github.com/IgroztrAlle/MegaDev/issues/3" rel="nofollow">one-day shift</a>.</p> <h2>The three problems</h2> <ol><li><strong>parser.</strong> The shared parser reads every date month first. Tenants who write the day first
 get flipped dates. This is the bug the merged ticket describes.</li> <li><strong>hint.</strong> The booking-v3 form prints <code>MM/DD/YYYY</code> under the date field. People at day-first
 tenants type what it says, and the form reads it their way. It shows up only on the form
 channel. Intake often tags these <code>parser</code>, because the symptom looks the same.</li> <li><strong>one-day shift.</strong> The date is off by one day, not swapped (Tuesday shown as Monday; two
@@ -37,16 +37,16 @@ and fix the page.</p> <!--[0--><p class="stamp svelte-1280m42">desk ref <b class
 			
 			<script>
 				{
-					__sveltekit_df16sd = {
+					__sveltekit_70u590 = {
 						base: new URL("../..", location).pathname.slice(0, -1),
-						version: "1793301388656"
+						version: "1793301837416"
 					};
 
 					const element = document.currentScript.parentElement;
 
 					import("../../_app/immutable/entry/start.DHGSJWrH.js").then(async (kit) => {
-						kit.init(__sveltekit_df16sd);
-						const app = await import("../../_app/immutable/entry/app.DMqZP0UE.js");
+						kit.init(__sveltekit_70u590);
+						const app = await import("../../_app/immutable/entry/app.Du_1w2pz.js");
 						kit.start(app, element, {
 							node_ids: [0, 6],
 							data: [null,null],
